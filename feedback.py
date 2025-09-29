@@ -14,7 +14,7 @@ bot = tb.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start_command(message):
-    bot.send_message(message.chat.id, "Приветствую, отправь сообщение для @nullpixl. @nohelloru")
+    bot.send_message(message.chat.id, "Отправьте сообщение")
 
 @bot.message_handler(content_types=['text', 'photo', 'video', 'document', 'audio', 'voice', 'sticker', 'location', 'contact'])
 def handle_all_messages(message):
@@ -41,4 +41,5 @@ def handle_all_messages(message):
     bot.reply_to(message, "Отправлено")
 
 if __name__ == '__main__':
+
     bot.infinity_polling()
